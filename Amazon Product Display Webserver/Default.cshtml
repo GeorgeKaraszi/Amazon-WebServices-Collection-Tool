@@ -1,0 +1,39 @@
+﻿@{
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Browse Products";
+	
+	DatabaseConnection dbc = new DatabaseConnection();
+	List<string>[] list = dbc.GetDefaultBrowserList();
+}
+
+<hgroup class="title">
+    <h2>Find top of the line products</h2>
+</hgroup>
+
+	@try
+	{
+		for (int i = 0; i < list[0].Count; i++)
+		 {
+
+			 var asinUrl = "Product?asin=" + list[0][i];
+			 var name = list[1][i].Substring(0, 10);
+			 var price = list[2][i];
+			 var imageUrl = list[3][i];
+
+			 <aside>
+				 <h3>@name</h3>
+				 <p>
+					 <img src=@imageUrl alt="0" height="182" width="162" />
+				 </p>
+				 <ul>
+					 <li><b>$ @price</b></li>
+					 <li><a href=@asinUrl>Select</a></li>
+				 </ul>
+			 </aside>
+		 }
+	}
+	catch (Exception e)
+	{
+		
+	}
+}

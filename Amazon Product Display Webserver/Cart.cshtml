@@ -1,0 +1,92 @@
+﻿@{
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Browse Products";
+
+    DatabaseConnection dbc = new DatabaseConnection();
+    var addProductASIN = Request.QueryString["Buy"];
+	decimal GrandTotal = 0.0m;
+    if (IsPost)
+    {
+        string asin = Request["asin"];
+        string quantity = Request["quantity"];
+
+        if (quantity.Contains('0') == false)
+        {
+            dbc.ChangeShoppingQuantity(asin, quantity);
+        }
+        else
+        {
+            dbc.DeleteFromCart(asin, quantity);
+        }
+    }
+    else if(addProductASIN != null)
+    {
+        dbc.AddToCart(addProductASIN);
+    }
+    
+    
+    List<string>[] list = dbc.GetCartItems();
+    
+    
+}
+
+
+<hgroup class="title">
+    <h2>Find top of the line products</h2>
+</hgroup>
+
+<form method="post">
+    <center>
+    <table class="tftable" border="1">
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+        </tr>
+
+        @for (int i = 0; i < list[0].Count; i++)
+        {
+            try
+            {
+                var name = list[0][i];//.Substring(0, 20);
+                var price = list[1][i];
+                var quantity = list[2][i];
+                var imageUrl = list[3][i];
+                var asin = list[4][i];
+                var updateUrl = "Cart/?Update=" + asin + "?q=";
+                var totalPrice = decimal.Parse(price) * Int32.Parse(quantity);
+	            var productPage = "product?asin=" + asin;
+	            GrandTotal += totalPrice;
+                <tr>
+	                <td>
+		                <a href=@productPage>
+			                      <img src=@imageUrl width="87" height="71" alt="" />
+		                </a>
+	                </td>
+	                <td><a href=@productPage>
+							<b>@name</b>
+						</a>
+					</td>
+                    <td>$@price</td>
+                    <td><input type="text" name="quantity" style="width:50px;" value=@quantity>
+                        <input type="hidden" name="asin" value=@asin>
+                        <input type="submit" value="Change">
+                        </td>
+                    <td>$@totalPrice</td>
+                </tr>
+            }
+            catch (Exception e)
+            {
+
+            }
+        }
+	    <tr>
+		    <td></td><td></td><td></td>
+			<td><b>Grand Total:</b></td>
+			<td><b>$@GrandTotal</b></td>
+	    </tr>
+    </table>
+        </center>
+</form>

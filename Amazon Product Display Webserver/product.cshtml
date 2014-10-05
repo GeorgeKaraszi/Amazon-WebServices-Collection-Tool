@@ -1,0 +1,58 @@
+﻿@{
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Product Extended Information";
+    string asin_request = Request.QueryString["asin"];
+
+    DatabaseConnection dbc = new DatabaseConnection();
+    var product = dbc.GetProduct(asin_request);
+
+}
+
+<hgroup class="title">
+    <h2>Find top of the line products</h2>
+</hgroup>
+<article>
+@{ 
+        var asin = product[0];
+        var name = product[1];
+        var des = product[2];
+        var dem = product[3];
+        var imageUrl = product[4];
+        var cat = product[5];
+        var price = product[6];
+        var pgs = product[7];
+        var pub = product[8];
+        var pubdate = product[9];
+        var destUrl = product[10];
+        var buyProduct = "Cart?Buy=" + asin;
+        
+        
+        
+            
+            <center>
+                <h4>@cat </h4><br/>
+                <h3><font size="72">@name</font></h3>
+                <p>
+                    <img src=@imageUrl alt="0" />
+                </p> <br/>
+            <a href=@buyProduct>Add To Cart</a>
+            </center>
+            
+
+            <ul>
+                <li><b>Price: $@price</b></li>
+                <li><b>Dimensions:</b> @dem</li>
+                @{
+                    if(cat.Equals("Book")) 
+                    {     
+                        <li><b>Page Count:</b> @pgs</li>
+                        <li><b>Publisher:</b> @pub</li>
+                        <li><b>Publication Date:</b> @pubdate</li>
+                    }
+                }
+                <li><a href=@destUrl>Amazon Product Page</a></li>
+                <li><b>Description:</b> @des</li>
+            </ul>
+        
+}
+    </article>

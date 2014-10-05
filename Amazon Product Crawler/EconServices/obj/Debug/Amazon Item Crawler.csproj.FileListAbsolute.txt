@@ -1,0 +1,3 @@
+C:\Users\George\Desktop\Projects\Amazon\Amazon Product Crawler\EconServices\bin\Debug\EconServices.exe.config
+C:\Users\George\Desktop\Projects\Amazon\Amazon Product Crawler\EconServices\obj\Debug\EconServices.exe
+C:\Users\George\Desktop\Projects\Amazon\Amazon Product Crawler\EconServices\obj\Debug\EconServices.pdb

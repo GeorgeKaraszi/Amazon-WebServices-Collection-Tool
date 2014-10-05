@@ -1,0 +1,15 @@
+c:\users\george\documents\visual studio 2013\Projects\EconServices\EconServices\bin\Debug\EconServices.exe.config
+c:\users\george\documents\visual studio 2013\Projects\EconServices\EconServices\bin\Debug\EconServices.exe
+c:\users\george\documents\visual studio 2013\Projects\EconServices\EconServices\bin\Debug\EconServices.pdb
+c:\users\george\documents\visual studio 2013\Projects\EconServices\EconServices\obj\Debug\EconServices.csprojResolveAssemblyReference.cache
+c:\users\george\documents\visual studio 2013\Projects\EconServices\EconServices\obj\Debug\EconServices.Properties.Resources.resources
+c:\users\george\documents\visual studio 2013\Projects\EconServices\EconServices\obj\Debug\EconServices.csproj.GenerateResource.Cache
+c:\users\george\documents\visual studio 2013\Projects\EconServices\EconServices\obj\Debug\EconServices.exe
+c:\users\george\documents\visual studio 2013\Projects\EconServices\EconServices\obj\Debug\EconServices.pdb
+C:\Users\George\Documents\Visual Studio 2013\Projects\EconServices\EconServices\bin\Debug\NKCraddock.AmazonItemLookup.dll
+C:\Users\George\Documents\Visual Studio 2013\Projects\EconServices\EconServices\bin\Debug\NKCraddock.AmazonItemLookup.pdb
+C:\Users\George\Documents\Visual Studio 2013\Projects\EconServices\EconServices\obj\Debug\EconServices.AmazonItemGatheringGUI.resources
+C:\Users\George\Documents\Visual Studio 2013\Projects\EconServices\EconServices\bin\Debug\MySql.Data.dll
+C:\Users\George\Desktop\Projects\Amazon\Amazon Product Crawler\EconServices\bin\Debug\EconServices.exe.config
+C:\Users\George\Desktop\Projects\Amazon\Amazon Product Crawler\EconServices\obj\Debug\EconServices.exe
+C:\Users\George\Desktop\Projects\Amazon\Amazon Product Crawler\EconServices\obj\Debug\EconServices.pdb
