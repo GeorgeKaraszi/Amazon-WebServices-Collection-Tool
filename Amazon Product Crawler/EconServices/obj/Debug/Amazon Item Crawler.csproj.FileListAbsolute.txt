@@ -1,3 +1,6 @@
 C:\Users\George\Desktop\Projects\Amazon\Amazon Product Crawler\EconServices\bin\Debug\EconServices.exe.config
 C:\Users\George\Desktop\Projects\Amazon\Amazon Product Crawler\EconServices\obj\Debug\EconServices.exe
 C:\Users\George\Desktop\Projects\Amazon\Amazon Product Crawler\EconServices\obj\Debug\EconServices.pdb
+C:\Users\George\Documents\GitHub\Amazon-WebServices-Collection-Tool\Amazon Product Crawler\EconServices\bin\Debug\EconServices.exe.config
+C:\Users\George\Documents\GitHub\Amazon-WebServices-Collection-Tool\Amazon Product Crawler\EconServices\obj\Debug\EconServices.exe
+C:\Users\George\Documents\GitHub\Amazon-WebServices-Collection-Tool\Amazon Product Crawler\EconServices\obj\Debug\EconServices.pdb

@@ -45,7 +45,7 @@ namespace EconServices
             bw.DoWork += new DoWorkEventHandler(bw_StartWork);
 
 			//Amazons web service start. Below are service ID's to my account
-            _amazonItems = new AmazonItemHandler("AKIAIG4SL6TEEERTWKBA",
+            _amazonItems = new AmazonItemHandler("AmazonIDGoesHere",
                 "rgK8fkdeLRiiaJ0KIQCE0bt7fsN/JkC8rvfLRExg",
                 "wmst-20");
         }
